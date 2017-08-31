@@ -7,22 +7,11 @@ exports.seed = function(knex, Promise) {
         {
           id: 1,
           username: 'Race',
-          height: 1.88,
-          weight: 102.058,
+          height: 74,
+          weight: 220,
           sex: "male",
-          pushups: 150,
-          situps: 200,
-          plank_secs: 300
-        },
-        {
-          id: 2,
-          username: 'butthead',
-          height: 1.5,
-          weight: 105,
-          sex: "female",
-          pushups: 80,
-          situps: 225,
-          plank_secs: 100
+          age: 25,
+          workoutfreq: 6
         }
       ]);
   });

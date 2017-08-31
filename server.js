@@ -41,9 +41,8 @@ app.post('/users', function(req, res) {
           height: req.body.height,
           weight: req.body.weight,
           sex: req.body.sex,
-          pushups: req.body.pushups,
-          situps: req.body.situps,
-          plank_secs: req.body.plank_secs
+          age: req.body.age,
+          workoutfreq: req.body.workoutfreq
         })
   .then(function(){
     knex('users')
@@ -51,6 +50,18 @@ app.post('/users', function(req, res) {
       .then(function() {
       res.redirect('/users');
     })
+  })
+})
+
+app.post('/users/:id', (req, res) => {
+  knex('users').where('id', req.params.id).update(req.body).then(() =>{
+  res.redirect('/users');
+})
+})
+
+app.delete('/users/:id', (req, res) => {
+  knex('users').where('id', req.params.id).del().then(() => {
+    res.send('deleted user')
   })
 })
 

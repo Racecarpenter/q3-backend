@@ -2,12 +2,11 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTable('users', function(table) {
     table.increments();
     table.string('username');
-    table.float('height');
-    table.float('weight');
+    table.integer('height');
+    table.integer('weight');
     table.string('sex');
-    table.integer('pushups');
-    table.integer('situps');
-    table.integer('plank_secs');
+    table.integer('age');
+    table.integer('workoutfreq')
   })
 };
 
