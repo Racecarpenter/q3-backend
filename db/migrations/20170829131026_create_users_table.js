@@ -7,6 +7,7 @@ exports.up = function(knex, Promise) {
     table.string('sex');
     table.integer('age');
     table.integer('workoutfreq')
+    table.float('bmr');
   })
 };
 

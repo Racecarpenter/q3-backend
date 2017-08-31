@@ -35,6 +35,16 @@ app.get('/users/:id', function(req, res) {
 })
 
 app.post('/users', function(req, res) {
+  if(req.body.sex==="male"){
+    var bmr = 66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age);
+    req.body.bmr = bmr;
+  } else if(req.body.sex==="female") {
+    var bmr = 655.1 + (4.35 * req.body.weight) + (4.7 * req.body.height) - (4.7 * req.body.age);
+    req.body.bmr = bmr;
+  } else{
+    var bmr = 66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age);
+    req.body.bmr = bmr;
+  };
   knex('users')
   .insert({
           username: req.body.username,
@@ -42,7 +52,8 @@ app.post('/users', function(req, res) {
           weight: req.body.weight,
           sex: req.body.sex,
           age: req.body.age,
-          workoutfreq: req.body.workoutfreq
+          workoutfreq: req.body.workoutfreq,
+          bmr: req.body.bmr
         })
   .then(function(){
     knex('users')
@@ -61,7 +72,9 @@ app.post('/users/:id', (req, res) => {
 
 app.delete('/users/:id', (req, res) => {
   knex('users').where('id', req.params.id).del().then(() => {
-    res.send('deleted user')
+    knex.raw(`select * from users`).then(function(users) {
+      res.send(users.rows);
+    })
   })
 })
 

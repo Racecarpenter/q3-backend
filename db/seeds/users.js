@@ -11,7 +11,8 @@ exports.seed = function(knex, Promise) {
           weight: 220,
           sex: "male",
           age: 25,
-          workoutfreq: 6
+          workoutfreq: 6,
+          bmr: null
         }
       ]);
   });
