@@ -37,53 +37,53 @@ app.get('/users/:id', function(req, res) {
 app.post('/users', function(req, res) {
   if(req.body.sex==="male"){
     if(req.body.workoutfreq < 1){
-      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age) * 1.2);
+      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age)) * 1.2;
       req.body.bmr = bmr;
     } else if(req.body.workoutfreq >= 1 && req.body.workoutfreq <= 3){
-      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age) * 1.375);
+      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age)) * 1.375;
       req.body.bmr = bmr;
     } else if(req.body.workoutfreq >= 4 && req.body.workoutfreq <= 5){
-      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age) * 1.55);
+      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age)) * 1.55;
       req.body.bmr = bmr;
     } else if(req.body.workoutfreq >= 6 && req.body.workoutfreq <= 7){
-      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age) * 1.725);
+      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age)) * 1.725;
       req.body.bmr = bmr;
     } else{
-      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age) * 1.9);
+      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age)) * 1.9;
       req.body.bmr = bmr;
     };
   } else if(req.body.sex==="female") {
     if(req.body.workoutfreq < 1){
-      var bmr = (655.1 + (4.35 * req.body.weight) + (4.7 * req.body.height) - (4.7 * req.body.age) * 1.2);
+      var bmr = (655.1 + (4.35 * req.body.weight) + (4.7 * req.body.height) - (4.7 * req.body.age)) * 1.2;
       req.body.bmr = bmr;
     } else if(req.body.workoutfreq >= 1 && req.body.workoutfreq <= 3){
-      var bmr = (655.1 + (4.35 * req.body.weight) + (4.7 * req.body.height) - (4.7 * req.body.age) * 1.375);
+      var bmr = (655.1 + (4.35 * req.body.weight) + (4.7 * req.body.height) - (4.7 * req.body.age)) * 1.375;
       req.body.bmr = bmr;
     } else if(req.body.workoutfreq >= 4 && req.body.workoutfreq <= 5){
-      var bmr = (655.1 + (4.35 * req.body.weight) + (4.7 * req.body.height) - (4.7 * req.body.age) * 1.55);
+      var bmr = (655.1 + (4.35 * req.body.weight) + (4.7 * req.body.height) - (4.7 * req.body.age)) * 1.55;
       req.body.bmr = bmr;
     } else if(req.body.workoutfreq >= 6 && req.body.workoutfreq <= 7){
-      var bmr = (655.1 + (4.35 * req.body.weight) + (4.7 * req.body.height) - (4.7 * req.body.age) * 1.725);
+      var bmr = (655.1 + (4.35 * req.body.weight) + (4.7 * req.body.height) - (4.7 * req.body.age)) * 1.725;
       req.body.bmr = bmr;
     } else{
-      var bmr = (655.1 + (4.35 * req.body.weight) + (4.7 * req.body.height) - (4.7 * req.body.age) * 1.9);
+      var bmr = (655.1 + (4.35 * req.body.weight) + (4.7 * req.body.height) - (4.7 * req.body.age)) * 1.9;
       req.body.bmr = bmr;
     };
   } else{
     if(req.body.workoutfreq < 1){
-      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age) * 1.2);
+      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age)) * 1.2;
       req.body.bmr = bmr;
     } else if(req.body.workoutfreq >= 1 && req.body.workoutfreq <= 3){
-      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age) * 1.375);
+      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age)) * 1.375;
       req.body.bmr = bmr;
     } else if(req.body.workoutfreq >= 4 && req.body.workoutfreq <= 5){
-      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age) * 1.55);
+      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age)) * 1.55;
       req.body.bmr = bmr;
     } else if(req.body.workoutfreq >= 6 && req.body.workoutfreq <= 7){
-      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age) * 1.725);
+      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age)) * 1.725;
       req.body.bmr = bmr;
     } else{
-      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age) * 1.9);
+      var bmr = (66 + (6.2 * req.body.weight) + (12.7 * req.body.height) - (6.76 * req.body.age)) * 1.9;
       req.body.bmr = bmr;
     };
   };
